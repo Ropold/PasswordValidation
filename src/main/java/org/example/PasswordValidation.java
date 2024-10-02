@@ -69,6 +69,14 @@ public class PasswordValidation {
         return false;
     }
 
+    public static boolean createUniquePwWithOldMethods(String password){
+        return moreThanEightChars(password)
+                && pwWithDigits(password)
+                && hasUpperAndLowerChars(password)
+                && pwIsNotCommonlyUsed(password)
+                && pwContainsSpecialCharacters(password);
+    }
+
     public static String createUniquePw(){
 
         String[] specialCharacters = { "*", ".", "!", "@", "#", "$", "%", "^", "&", "(", ")", "{", "}", "[", "]", ":", ";", "<", ">", ",", ".", "?", "/", "~", "_", "+", "-", "=", "|", "\\" };

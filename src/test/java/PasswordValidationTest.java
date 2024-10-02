@@ -119,4 +119,16 @@ public class PasswordValidationTest {
         //then
         assertFalse(actual);
     }
+
+    @Test
+    void checkIfCreateUniquePwWithOldMethodsWorks(){
+        //given
+        String password = "RqByMEthf4w&";
+
+        //when
+        boolean actual = PasswordValidation.createUniquePwWithOldMethods(password);
+
+        //then
+        assertTrue(actual);
+    }
 }
